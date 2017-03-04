@@ -1,25 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="myApp">
     <head>
         <title>My to do list</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="css/style.css" rel="stylesheet">
-    </head>
+    </head><x></x>
     <body>
         <div class="todo-wrapper" ng-controller="ListController">
-            <h2>You've got <span class="emphasis">{{getTotalTodos}}</span> things to do</h2>
+            <h2>You've got <span class="emphasis">{{getTotalTodos()}}</span> things to do</h2>
             <ul>
                 <li ng-repeat="todo in todos">
-                    <input type="checkbox" ng-model="todo.done"/>
-                    <span class="done-{{todo.done}}">{{todo.text}}</span>
+                <input type="checkbox" ng-model="todo.done"/>
+                <span class="done-{{todo.done}}">{{todo.text}}</span>
                 </li>
             </ul>
             <form>
-                <input type="text" class="add-input" placeholder="Enter your task please..." ng-model="formToDotext" ng-model-instant>
-                <button class="add-btn" ng-click="addToDo()" value="Add"><span>Add</span></button>
+                <input class="add-input" placeholder="Enter task..." type="text" ng-model="formTodoText" ng-model-instant />
+                <button class="add-btn" ng-click="addTodo()"><h2>Add</h2></button>
             </form>
-            <button class="clear-btn" ng-click="clearCompleated()">Clear compleated</button>
+      
+            <button class="clear-btn" ng-click="clearCompleted()">Clear completed</button>
         </div>
 
 
