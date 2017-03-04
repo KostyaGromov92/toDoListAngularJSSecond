@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>My to do list</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="todo-wrapper" ng-controller="ListController">
+            <h2>You've got <span class="emphasis">{{getTotalTodos}}</span> things to do</h2>
+            <ul>
+                <li ng-repeat="todo in todos">
+                    <input type="checkbox" ng-model="todo.done"/>
+                    <span class="done-{{todo.done}}">{{todo.text}}</span>
+                </li>
+            </ul>
+            <form>
+                <input type="text" class="add-input" placeholder="Enter your task please..." ng-model="formToDotext" ng-model-instant>
+                <button class="add-btn" ng-click="addToDo()" value="Add"></button>
+            </form>
+            <button class="clear-btn" ng-click="clearCompleated()">Clear compleated</button>
+        </div>
+
+
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+        <script src="//use.edgefonts.net/vast-shadow:n4:all.js"></script>
+        <script src="//use.edgefonts.net/vast-shadow:n4:all;megrim.js"></script>
+        <script src="script/controller.js"></script>
+        <script src="script/script.js"></script>
+    </body>
+</html>
