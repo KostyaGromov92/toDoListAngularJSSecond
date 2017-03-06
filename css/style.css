@@ -89,4 +89,5 @@ li input[type="checkbox"] {
   font-size: 2em;
   font-family: megrim, fantasy;
   color: #aaa;
+  cursor: pointer;
 }
