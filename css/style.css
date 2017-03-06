@@ -9,14 +9,14 @@ body {
 
 h2 {
   font-size: 2em;
-  
   font-family: megrim, fantasy;
   background: #1CA89C;
-  padding: 40px;
+  padding: 20px;
   margin: 0;
   color: #333;
   text-align: center;
  }
+
 .emphasis {
   font-family: vast-shadow, sans-serif;
   font-size: 4em;
@@ -31,7 +31,6 @@ li {
   font-family: megrim, fantasy;
   font-size: 2em;
   padding: 40px;
-  
   background: #65d8cb; /* Old browsers */
   background: -webkit-gradient(linear, 0 0, 0 100%, from(#65d8cb), to(#72f4e9));
   background: -webkit-linear-gradient(#65d8cb 0%, #72f4e9 100%);
@@ -84,7 +83,7 @@ li input[type="checkbox"] {
 .clear-btn {
   width: 100%;
   border: none;
-  height: 100px;
+  height: 90px;
   background: #13756D;
   font-size: 2em;
   font-family: megrim, fantasy;
